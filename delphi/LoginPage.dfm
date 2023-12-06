@@ -1,6 +1,6 @@
 object frmLoginPage: TfrmLoginPage
-  Left = 301
-  Top = 211
+  Left = 464
+  Top = 232
   Width = 1305
   Height = 675
   Caption = 'frmLoginPage'
@@ -23,8 +23,8 @@ object frmLoginPage: TfrmLoginPage
   object lblPassword: TLabel
     Left = 104
     Top = 96
-    Width = 49
-    Height = 25
+    Width = 46
+    Height = 13
     Caption = 'Password'
   end
   object edtUsername: TEdit
@@ -48,5 +48,15 @@ object frmLoginPage: TfrmLoginPage
     Height = 25
     Caption = 'Login'
     TabOrder = 2
+    OnClick = btnLoginClick
+  end
+  object qryLoginDB: TADOQuery
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\light\Desk' +
+      'top\desktop\mrsajadah\ComputerProject\CustomerInfo.mdb;Persist S' +
+      'ecurity Info=False'
+    Parameters = <>
+    Left = 392
+    Top = 40
   end
 end
