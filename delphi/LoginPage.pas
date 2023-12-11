@@ -14,6 +14,7 @@ type
     edtPassword: TEdit;
     btnLogin: TButton;
     qryLoginDB: TADOQuery;
+    btnSignUp: TButton;
     procedure btnLoginClick(Sender: TObject);
   private
     { Private declarations }

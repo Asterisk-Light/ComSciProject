@@ -11,8 +11,12 @@ type
     btnLoginRegister: TButton;
     imgMainMenu: TImage;
     btnSyndicates: TButton;
+    imgGame1: TImage;
+    imgGame2: TImage;
+    imgGame3: TImage;
     procedure btnLoginRegisterClick(Sender: TObject);
     procedure btnSyndicatesClick(Sender: TObject);
+    procedure imgMainMenuClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,7 +28,7 @@ var
 
 implementation
 
-uses LoginPage;
+uses LoginPage, SyndicatePage;
 
 {$R *.dfm}
 
@@ -38,6 +42,11 @@ procedure TfrmMainMenu.btnSyndicatesClick(Sender: TObject);
 begin
 frmMainMenu.Hide;
 frmSyndicatePage.show;
+end;
+
+procedure TfrmMainMenu.imgMainMenuClick(Sender: TObject);
+begin
+frmLoginPage.show;
 end;
 
 end.
