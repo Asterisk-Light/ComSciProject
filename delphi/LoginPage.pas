@@ -16,6 +16,7 @@ type
     qryLoginDB: TADOQuery;
     btnSignUp: TButton;
     procedure btnLoginClick(Sender: TObject);
+    procedure btnSignUpClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,7 +30,7 @@ var
 
 implementation
 
-uses MainMenu;
+uses MainMenu, SignUpPage;
 
 {$R *.dfm}
 
@@ -58,6 +59,12 @@ begin
           end;
       end;
 end;
+procedure TfrmLoginPage.btnSignUpClick(Sender: TObject);
+begin
+frmLoginPage.Hide;
+frmSignUpPage.Show;
+end;
+
 end.
 
 

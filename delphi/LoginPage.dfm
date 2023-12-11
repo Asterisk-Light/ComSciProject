@@ -57,6 +57,7 @@ object frmLoginPage: TfrmLoginPage
     Height = 33
     Caption = 'Sign Up'
     TabOrder = 3
+    OnClick = btnSignUpClick
   end
   object qryLoginDB: TADOQuery
     ConnectionString = 

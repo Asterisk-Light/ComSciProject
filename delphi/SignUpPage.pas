@@ -33,8 +33,6 @@ implementation
 procedure TfrmSignUpPage.btnSignupClick(Sender: TObject);
 begin
     qryLoginDB.Close;
-    qryLoginDB.SQL.Clear;
-    qryLoginDB.SQL.Add('select * from Logins where Username='+ QuotedStr(edtUsername.Text));
     qryLoginDB.Open;
     if edtUsername.Text = qryLoginDB.FieldByName('Username').AsString then
       begin
@@ -42,7 +40,10 @@ begin
       end
     else
       begin
-        
+        qryLoginDB.SQL.Add('INSERT INTO Logins (Username, Passwords) VALUES (' + QuotedStr(edtUsername.Text) + ', ' + QuotedStr(edtPassword.Text) + ')');
+        qryLoginDB.SQL.Clear;
+        qryLoginDB.SQL.Add('INSERT INTO CustInfo (Email) VALUES(' + QuotedStr(edtEmail.Text) + ')');
+        qryLoginDB.SQL.Clear;
       end;
 end;
 
