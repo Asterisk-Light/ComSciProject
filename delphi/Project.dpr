@@ -6,7 +6,8 @@ uses
   LoginPage in 'LoginPage.pas' {frmLoginPage},
   SyndicatePage in '..\SyndicatePage.pas' {frmSyndicatePage},
   SignUpPage in 'SignUpPage.pas' {frmSignUpPage},
-  JoinedSyndicate in 'JoinedSyndicate.pas' {Form1};
+  JoinedSyndicate in 'JoinedSyndicate.pas' {frmSyndicateJoined},
+  UnchartedInfo in 'UnchartedInfo.pas' {frmUnchartedInfo};
 
 {$R *.res}
 
@@ -16,6 +17,7 @@ begin
   Application.CreateForm(TfrmLoginPage, frmLoginPage);
   Application.CreateForm(TfrmSyndicatePage, frmSyndicatePage);
   Application.CreateForm(TfrmSignUpPage, frmSignUpPage);
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmSyndicateJoined, frmSyndicateJoined);
+  Application.CreateForm(TfrmUnchartedInfo, frmUnchartedInfo);
   Application.Run;
 end.

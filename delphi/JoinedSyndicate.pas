@@ -7,7 +7,7 @@ uses
   Dialogs, StdCtrls;
 
 type
-  TForm1 = class(TForm)
+  TfrmSyndicateJoined = class(TForm)
     lblSyndicateJoined: TLabel;
   private
     { Private declarations }
@@ -16,7 +16,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmSyndicateJoined: TfrmSyndicateJoined;
 
 implementation
 

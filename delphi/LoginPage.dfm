@@ -1,17 +1,15 @@
 object frmLoginPage: TfrmLoginPage
   Left = 435
   Top = 179
-  Width = 1305
-  Height = 675
   Caption = 'frmLoginPage'
+  ClientHeight = 635
+  ClientWidth = 1285
   Color = clActiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object lblUsername: TLabel
     Left = 104
@@ -26,6 +24,13 @@ object frmLoginPage: TfrmLoginPage
     Width = 46
     Height = 13
     Caption = 'Password'
+  end
+  object lblLogin: TLabel
+    Left = 200
+    Top = 49
+    Width = 25
+    Height = 13
+    Caption = 'Login'
   end
   object edtUsername: TEdit
     Left = 168

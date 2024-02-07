@@ -1,9 +1,9 @@
-object Form1: TForm1
+object frmSyndicateJoined: TfrmSyndicateJoined
   Left = 277
   Top = 135
   Width = 1305
   Height = 666
-  Caption = 'Form1'
+  Caption = 'frmSyndicateJoined'
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,8 +16,8 @@ object Form1: TForm1
   object lblSyndicateJoined: TLabel
     Left = 248
     Top = 176
-    Width = 665
-    Height = 209
+    Width = 121
+    Height = 13
     Caption = 'You Joined the Syndicate'
     Color = clCream
     ParentColor = False

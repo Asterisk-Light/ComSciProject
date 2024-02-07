@@ -33,7 +33,6 @@ implementation
 procedure TfrmSignUpPage.btnSignupClick(Sender: TObject);
 begin
     qryLoginDB.Close;
-    qryLoginDB.Open;
     if edtUsername.Text = qryLoginDB.FieldByName('Username').AsString then
       begin
         Application.MessageBox('Username already exists', 'Information', MB_OK or MB_ICONINFORMATION);
@@ -41,7 +40,6 @@ begin
     else
       begin
         qryLoginDB.SQL.Add('INSERT INTO Logins (Username, Passwords) VALUES (' + QuotedStr(edtUsername.Text) + ', ' + QuotedStr(edtPassword.Text) + ')');
-        qryLoginDB.SQL.Clear;
         qryLoginDB.SQL.Add('INSERT INTO CustInfo (Email) VALUES(' + QuotedStr(edtEmail.Text) + ')');
         qryLoginDB.SQL.Clear;
       end;

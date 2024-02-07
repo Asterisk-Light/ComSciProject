@@ -1,8 +1,8 @@
 object frmMainMenu: TfrmMainMenu
-  Left = 406
-  Top = 169
-  Width = 1317
-  Height = 769
+  Left = 508
+  Top = 162
+  Width = 1303
+  Height = 766
   Caption = 'frmMainMenu'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -2686,6 +2686,7 @@ object frmMainMenu: TfrmMainMenu
       2FFD0AB831AF548E8A0B46CBD1468977A740E032C11F9CC3AF272FFCB15E9BA2
       59FD8F4C8633F7C8DCC4F727926BCD6DFF00E4621F4FE95EB67A53C1C55DC855
       9EC478F4A5C3FF00914A7A8A7D77981FFFD9}
+    OnClick = imgGame1Click
   end
   object imgGame2: TImage
     Left = 512

@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ExtCtrls, TeeProcs, TeEngine, Chart, StdCtrls, DB, ADODB;
+  Dialogs, ExtCtrls, {TeeProcs, TeEngine, Chart,} StdCtrls, DB, ADODB;
 
 type
   TfrmLoginPage = class(TForm)
@@ -15,6 +15,7 @@ type
     btnLogin: TButton;
     qryLoginDB: TADOQuery;
     btnSignUp: TButton;
+    lblLogin: TLabel;
     procedure btnLoginClick(Sender: TObject);
     procedure btnSignUpClick(Sender: TObject);
   private
