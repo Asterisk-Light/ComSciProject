@@ -2,8 +2,8 @@ object frmLoginPage: TfrmLoginPage
   Left = 435
   Top = 179
   Caption = 'frmLoginPage'
-  ClientHeight = 635
-  ClientWidth = 1285
+  ClientHeight = 650
+  ClientWidth = 450
   Color = clActiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

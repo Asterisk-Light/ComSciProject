@@ -1,17 +1,15 @@
 object frmMainMenu: TfrmMainMenu
   Left = 508
   Top = 162
-  Width = 1303
-  Height = 766
   Caption = 'frmMainMenu'
+  ClientHeight = 720
+  ClientWidth = 1280
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object imgMainMenu: TImage
     Left = 0
@@ -4016,5 +4014,13 @@ object frmMainMenu: TfrmMainMenu
     Caption = 'Syndicates'
     TabOrder = 1
     OnClick = btnSyndicatesClick
+  end
+  object Button1: TButton
+    Left = 288
+    Top = 657
+    Width = 185
+    Height = 48
+    Caption = 'Reviews'
+    TabOrder = 2
   end
 end

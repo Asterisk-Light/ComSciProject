@@ -1,0 +1,33 @@
+unit ReviewsPage;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TlblReviewsPageFrm = class(TForm)
+    DDGameName: TComboBox;
+    lblGameName: TLabel;
+    Label2: TLabel;
+    DDReviewAuthor: TComboBox;
+    DisplayReview: TStaticText;
+    lblDisplayReview: TLabel;
+    btnCreateReview: TButton;
+    btnDisplay: TButton;
+    btnGoBack: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  lblReviewsPageFrm: TlblReviewsPageFrm;
+
+implementation
+
+{$R *.dfm}
+
+end.

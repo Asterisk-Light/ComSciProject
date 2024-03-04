@@ -1,17 +1,15 @@
 object frmSyndicatePage: TfrmSyndicatePage
   Left = 165
   Top = 109
-  Width = 1628
-  Height = 963
   Caption = 'SyndicatesPage'
+  ClientHeight = 925
+  ClientWidth = 1616
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object imgSyndicatePage: TImage
     Left = 0
@@ -3763,5 +3761,14 @@ object frmSyndicatePage: TfrmSyndicatePage
     Height = 41
     Caption = 'Join'
     TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 1272
+    Top = 768
+    Width = 177
+    Height = 41
+    Caption = 'Go Back'
+    TabOrder = 3
+    OnClick = Button1Click
   end
 end

@@ -14,6 +14,7 @@ type
     imgGame1: TImage;
     imgGame2: TImage;
     imgGame3: TImage;
+    Button1: TButton;
     procedure btnLoginRegisterClick(Sender: TObject);
     procedure btnSyndicatesClick(Sender: TObject);
     procedure imgMainMenuClick(Sender: TObject);

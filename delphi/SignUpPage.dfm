@@ -1,17 +1,15 @@
 object frmSignUpPage: TfrmSignUpPage
   Left = 372
   Top = 226
-  Width = 1305
-  Height = 675
   Caption = 'Sign up'
+  ClientHeight = 637
+  ClientWidth = 1293
   Color = clHotLight
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object lblUsername: TLabel
     Left = 32
