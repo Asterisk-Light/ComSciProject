@@ -4022,5 +4022,6 @@ object frmMainMenu: TfrmMainMenu
     Height = 48
     Caption = 'Reviews'
     TabOrder = 2
+    OnClick = Button1Click
   end
 end

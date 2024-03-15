@@ -7,7 +7,9 @@ uses
   SyndicatePage in '..\SyndicatePage.pas' {frmSyndicatePage},
   SignUpPage in 'SignUpPage.pas' {frmSignUpPage},
   JoinedSyndicate in 'JoinedSyndicate.pas' {frmSyndicateJoined},
-  UnchartedInfo in 'UnchartedInfo.pas' {frmUnchartedInfo};
+  UnchartedInfo in 'UnchartedInfo.pas' {frmUnchartedInfo},
+  ReviewsPage in 'ReviewsPage.pas' {frmReviewsPage},
+  CreateReview in 'CreateReview.pas' {frmCreateReview};
 
 {$R *.res}
 
@@ -19,5 +21,7 @@ begin
   Application.CreateForm(TfrmSignUpPage, frmSignUpPage);
   Application.CreateForm(TfrmSyndicateJoined, frmSyndicateJoined);
   Application.CreateForm(TfrmUnchartedInfo, frmUnchartedInfo);
+  Application.CreateForm(TfrmReviewsPage, frmReviewsPage);
+  Application.CreateForm(TfrmCreateReview, frmCreateReview);
   Application.Run;
 end.

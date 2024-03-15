@@ -30,6 +30,8 @@ implementation
 
 {$R *.dfm}
 
+uses MainMenu;
+
 
 
 function IsPasswordCrazy(const s: AnsiString): Boolean;
@@ -77,16 +79,17 @@ begin
       end;
     if IsPasswordCrazy(edtPassword.Text) = False  then
       begin
-        Application.MessageBox('Password does not match criteria', 'Error', MB_OK or MB_ICONERROR)
+        Application.MessageBox('Password does not match criteria', 'Error', MB_OK or MB_ICONERROR);
       end
     else
       begin
         qryLoginDB.Close;
         qryLoginDB.SQL.Clear;
-        qryLoginDB.SQL.Add('INSERT INTO Logins (Username, Passwords) VALUES (' + QuotedStr(edtUsername.Text) + ', ' + QuotedStr(edtPassword.Text) + ')');
-        qryLoginDB.SQL.Add('INSERT INTO CustInfo (Email) VALUES(' + QuotedStr(edtEmail.Text) + ')');
-        qryLoginDB.Open;
+        qryLoginDB.SQL.Add('INSERT INTO CustInfo (Username, Passwords, Email) VALUES (' + QuotedStr(edtUsername.Text) + ', ' + QuotedStr(edtPassword.Text) + ',' + QuotedStr(edtEmail.Text) + ');');
+        qryLoginDB.ExecSQL;
         qryLoginDB.SQL.Clear;
+        frmSignUpPage.Hide;
+        frmMainMenu.Show;
       end;
 end;
 

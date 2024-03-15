@@ -14,8 +14,8 @@ object frmCreateReview: TfrmCreateReview
   object lblSelectGame: TLabel
     Left = 64
     Top = 33
-    Width = 241
-    Height = 16
+    Width = 236
+    Height = 15
     Caption = 'Select a Game you want to make a review for'
   end
   object lblWriteReview: TLabel
@@ -32,26 +32,19 @@ object frmCreateReview: TfrmCreateReview
     Height = 15
     Caption = 'Your Username'
   end
-  object DDGame: TComboBox
-    Left = 88
-    Top = 64
-    Width = 169
-    Height = 23
-    TabOrder = 0
-  end
-  object Edit1: TEdit
+  object edtReview: TEdit
     Left = 512
     Top = 48
     Width = 545
-    Height = 450
-    TabOrder = 1
+    Height = 23
+    TabOrder = 0
   end
   object edtAuthor: TEdit
     Left = 88
     Top = 117
     Width = 169
     Height = 23
-    TabOrder = 2
+    TabOrder = 1
   end
   object btnCreateReview: TButton
     Left = 112
@@ -59,7 +52,8 @@ object frmCreateReview: TfrmCreateReview
     Width = 113
     Height = 33
     Caption = 'Create Review'
-    TabOrder = 3
+    TabOrder = 2
+    OnClick = btnCreateReviewClick
   end
   object btnGoBack: TButton
     Left = 112
@@ -67,6 +61,23 @@ object frmCreateReview: TfrmCreateReview
     Width = 113
     Height = 33
     Caption = 'Go Back'
+    TabOrder = 3
+    OnClick = btnGoBackClick
+  end
+  object edtGame: TEdit
+    Left = 88
+    Top = 64
+    Width = 169
+    Height = 23
     TabOrder = 4
+  end
+  object qryGame: TADOQuery
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\light\Desk' +
+      'top\desktop\mrsajadah\ComputerProject\CustomerInfo.mdb;Persist S' +
+      'ecurity Info=False'
+    Parameters = <>
+    Left = 920
+    Top = 328
   end
 end

@@ -47,9 +47,9 @@ object frmReviewsPage: TfrmReviewsPage
     TabOrder = 1
   end
   object txtDisplayReview: TStaticText
-    Left = 512
+    Left = 516
     Top = 40
-    Width = 505
+    Width = 509
     Height = 481
     TabOrder = 2
   end
@@ -60,6 +60,7 @@ object frmReviewsPage: TfrmReviewsPage
     Height = 33
     Caption = 'Create Review'
     TabOrder = 3
+    OnClick = btnCreateReviewClick
   end
   object btnDisplay: TButton
     Left = 136
@@ -76,5 +77,6 @@ object frmReviewsPage: TfrmReviewsPage
     Height = 33
     Caption = 'Go Back'
     TabOrder = 5
+    OnClick = btnGoBackClick
   end
 end

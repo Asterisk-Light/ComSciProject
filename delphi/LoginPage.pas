@@ -39,7 +39,7 @@ procedure TfrmLoginPage.btnLoginClick(Sender: TObject);
 begin
     qryLoginDB.Close;
     qryLoginDB.SQL.Clear;
-    qryLoginDB.SQL.Add('select * from Logins where Username='+ QuotedStr(edtUsername.Text));
+    qryLoginDB.SQL.Add('select * from CustInfo where Username='+ QuotedStr(edtUsername.Text));
     qryLoginDB.Open;
     if qryLoginDB.RecordCount = 0 then
       begin

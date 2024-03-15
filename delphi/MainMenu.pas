@@ -19,6 +19,7 @@ type
     procedure btnSyndicatesClick(Sender: TObject);
     procedure imgMainMenuClick(Sender: TObject);
     procedure imgGame1Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,7 +31,7 @@ var
 
 implementation
 
-uses LoginPage, SyndicatePage, UnchartedInfo;
+uses LoginPage, SyndicatePage, UnchartedInfo, ReviewsPage;
 
 {$R *.dfm}
 
@@ -44,6 +45,12 @@ procedure TfrmMainMenu.btnSyndicatesClick(Sender: TObject);
 begin
 frmMainMenu.Hide;
 frmSyndicatePage.show;
+end;
+
+procedure TfrmMainMenu.Button1Click(Sender: TObject);
+begin
+frmMainMenu.Hide;
+frmReviewsPage.Show;
 end;
 
 procedure TfrmMainMenu.imgMainMenuClick(Sender: TObject);

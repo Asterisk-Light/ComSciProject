@@ -1,2 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/04 11:13:05.000.516,=C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\Unit1.pas</Transaction>
+    <Transaction>2024/03/04 11:15:38.000.066,C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\ReviewsPage.pas=C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\Unit1.pas</Transaction>
+    <Transaction>2024/03/04 11:15:38.000.066,C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\ReviewsPage.dfm=C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/03/04 11:32:22.000.150,=C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\Unit1.pas</Transaction>
+    <Transaction>2024/03/04 11:32:35.000.313,C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\CreateReview.pas=C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\Unit1.pas</Transaction>
+    <Transaction>2024/03/04 11:32:35.000.313,C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\CreateReview.dfm=C:\Users\light\Desktop\desktop\mrsajadah\ComputerProject\delphi\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

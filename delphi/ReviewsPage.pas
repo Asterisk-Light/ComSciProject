@@ -17,6 +17,8 @@ type
     btnCreateReview: TButton;
     btnDisplay: TButton;
     btnGoBack: TButton;
+    procedure btnCreateReviewClick(Sender: TObject);
+    procedure btnGoBackClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,5 +31,19 @@ var
 implementation
 
 {$R *.dfm}
+
+uses CreateReview, MainMenu;
+
+procedure TfrmReviewsPage.btnCreateReviewClick(Sender: TObject);
+begin
+frmReviewsPage.Hide;
+frmCreateReview.Show;
+end;
+
+procedure TfrmReviewsPage.btnGoBackClick(Sender: TObject);
+begin
+frmReviewsPage.Hide;
+frmMainMenu.Show;
+end;
 
 end.

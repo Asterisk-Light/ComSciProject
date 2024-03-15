@@ -1,0 +1,94 @@
+unit SignUpPage;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, DB, ADODB;
+
+type
+  TfrmSignUpPage = class(TForm)
+    lblUsername: TLabel;
+    lblPassword: TLabel;
+    lblEmail: TLabel;
+    edtUsername: TEdit;
+    edtPassword: TEdit;
+    edtEmail: TEdit;
+    btnSignup: TButton;
+    qryLoginDB: TADOQuery;
+    procedure btnSignupClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmSignUpPage: TfrmSignUpPage;
+
+implementation
+
+{$R *.dfm}
+
+
+
+function IsPasswordCrazy(const s: AnsiString): Boolean;
+const
+  C_Upcase = 1;
+  C_Locase = 2;
+  C_Digit = 4;
+  C_SpecSym = 8;
+  C_All = C_Upcase or C_Locase or C_Digit or C_SpecSym;
+var
+  i, keys: integer;
+begin
+
+  if Length(s) < 8 then begin
+    Result := False;
+    Exit;
+  end;
+
+  keys := 0;
+  for i := 1 to Length(s) do
+    case s[i] of
+      'A'..'Z': keys := keys or C_Upcase;
+      'a'..'z': keys := keys or C_Locase;
+      '0'..'9': keys := keys or C_Digit;
+      '!','#','%','&','*','@': keys := keys or C_SpecSym;
+    end;
+
+  Result := keys = C_All;
+end;
+
+procedure TfrmSignUpPage.btnSignupClick(Sender: TObject);
+begin
+    qryLoginDB.Close;
+    if edtUsername.Text = '' then
+      begin
+        Application.MessageBox('Please enter a username', 'Information', MB_OK or MB_ICONINFORMATION);
+      end;
+      qryLoginDB.Close;
+      qryLoginDB.SQL.Clear;
+      qryLoginDB.SQL.Add('select * from Logins where Username=' + QuotedStr(edtUsername.Text));
+      qryLoginDB.Open;
+    if edtUsername.Text = qryLoginDB.FieldByName('Username').AsString then
+      begin
+        Application.MessageBox('Username already exists', 'Information', MB_OK or MB_ICONINFORMATION);
+      end;
+    if IsPasswordCrazy(edtPassword.Text) = False  then
+      begin
+        Application.MessageBox('Password does not match criteria', 'Error', MB_OK or MB_ICONERROR);
+      end
+    else
+      begin
+        qryLoginDB.Close;
+        qryLoginDB.SQL.Clear;
+        qryLoginDB.SQL.Add('INSERT INTO CustInfo (Username, Passwords, Email) VALUES (' + QuotedStr(edtUsername.Text) + ', ' + QuotedStr(edtPassword.Text) + QuotedStr(edtEmail.Text) + ');');
+        {qryLoginDB.SQL.Add('INSERT INTO CustInfo (Email) VALUES(' + QuotedStr(edtEmail.Text) + ');');       }
+        qryLoginDB.ExecSQL;
+        qryLoginDB.SQL.Clear;
+      end;
+end;
+
+end.
+
