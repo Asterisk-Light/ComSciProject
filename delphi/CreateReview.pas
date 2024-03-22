@@ -43,7 +43,8 @@ begin
   Review := QuotedStr(edtReview.Text);
   qryGame.Open;
   qryGame.SQL.Clear;
-  qryGame.SQL.Add('Insert INTO Reviews (Game, Author, Review) VALUES (' + Game + ', ' + Author + ', ' + Review + ')')
+  qryGame.SQL.Add('Insert INTO Reviews (Game, Author, Review) VALUES (' + Game + ', ' + Author + ', ' + Review + ');');
+  qryGame.ExecSQL;
 end;
 
 procedure TfrmCreateReview.btnGoBackClick(Sender: TObject);
